@@ -139,7 +139,7 @@ p {
 }
 
 .sub_title {
-	margin-top: -2%;
+	
 	margin-bottom: 3%;
 	color: #009688;
 }
@@ -257,8 +257,13 @@ p {
 	width: 100%;
 }
 
+#justwork {
+	margin-right: 3vw;
+}
 
-
+.needs {
+	margin-top: 250px;
+}
 
 
 
