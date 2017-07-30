@@ -98,20 +98,20 @@
 
 			<div class="row" id="money_charts">
 				<div class="col-xs-6 contain_it">
-					<h5>ACT Public Insrastructure Spending (In Millions)</h5>
+					<h3>ACT Public Insrastructure Spending (In Millions)</h3>
 					<canvas id="current_stats"></canvas>
 				</div>
 				<div class="col-xs-6">
 					<div class="col-xs-6 contain_it">
-						<h5>Single Bus (In 100 thousands)</h5>
+						<h3>Single Bus (In Millions)</h3>
 						<canvas id="bus_stats_cur"></canvas>
 					</div>
 					<div class="col-xs-6 contain_it">
-						<h5>Phase 1 Light Rail (In Millions)</h5>
+						<h3>Phase 1 Light Rail (In Millions)</h3>
 						<canvas id="rail_stats_cur"></canvas>
 					</div>
 					<div class="col-xs-6 contain_it">
-						<h5>New ACT Public Infrastructure (In Millions)</h5>
+						<h3>New ACT Public Infrastructure (In Millions)</h3>
 						<canvas id="newinfa_stats_cur"></canvas>
 					</div>
 				</div>
@@ -151,7 +151,7 @@
 
 			<div class="row" id="peak_load">
 				<div class="col-xs-6 text">
-					<video controls autoplay loop width="400">
+					<video controls autoplay loop width="500">
 					  <source src="vids/output.mp4" type="video/mp4">
 					</video>
 				</div>
@@ -161,7 +161,7 @@
 						<h3>Visualising Network Dynamics</h3>
 						<p>From the GTFS data alone, our framework can produce an agent-based model, indicated by the black markers in the video on the left. Using high-level statistics provided in the ACT Open Data Repository, we were able to build a statistical model of the real-world performance of the ACT public transport network (shown by the red markers) which reproduced unusual bunching behaviour observed in real-time bus data.</p>
 					</div>
-					<div class="col-xs-12">
+					<div class="col-xs-11" id="justwork">
 						<canvas id="myChart"></canvas>
 					</div>
 				</div>
@@ -178,8 +178,8 @@
 			</div>
 
 			<div class="row">
-				<div class="col-xs-5 text">
-					<p>From the GTFS derived agent-based models (ABMs) we can produce heat maps showing which areas are serviced well by the public transport system. Combined with population data, this allows deep insight into the proportion of the ACT population that has equitable access to public transport infrastructure.</p>
+				<div class="col-xs-5 text" >
+					<p class="needs">From the GTFS derived agent-based models (ABMs) we can produce heat maps showing which areas are serviced well by the public transport system. Combined with population data, this allows deep insight into the proportion of the ACT population that has equitable access to public transport infrastructure.</p>
 					<p>These visualisations also show ‘at-a-glance’ the inefficiency of the predicted behaviour of the ACT transport network (on the right) compared with the intended behaviour (on the left), which is indicated by unusual density peaks caused by congestion of bus routes.</p>
 				</div>
 
@@ -208,7 +208,7 @@
 				</div>
 
 				<div class="col-xs-6 text">
-					<p>By modelling the utilisation and movement of commuters from mike data, we can incorporate information about commuter behaviour to build better schedules.</p>
+					<p class="needs">By modeling the utilisation and movement of commuters from myWay data, we can incorporate information about commuter behaviour to build better schedules. We can also overlay ACT vehicle registration information, to see if unserviced areas have higher car utilisation. </p>
 				</div>
 
 				
@@ -247,7 +247,7 @@
 
 				<div class="col-xs-12 text">
 					<p>The framework is extensible, limited only by the granularity of available data and sufficient information about traffic density and bulk movement of commuters.</p>
-					<p>Using our already-built ABM, we are now in a position to pursue optimisation of bus timetables. Given the introduction of the Gunghalin-Civic light rail line, an overhaul of the bus transport system is needed to ensure efficient utilisation of the Canberra public transport system.</p>
+					<p>Using our already-built ABM, we are now in a position to pursue optimisation of bus timetables. Given the introduction of the Gungahlin-Civic light rail line, an overhaul of the bus transport system is needed to ensure efficient utilisation of the Canberra public transport system.</p>
 					<p>Our GTFS derived graph model includes time-varying edge lengths, allowing us to apply constrained integer programming models to find, test, and validate alternative bus schedules.</p>
 				</div>
 			</div>
@@ -354,7 +354,7 @@
 
 			<div class="row">
 				<div class="col-xs-12 copyright">
-					<h4>CREATED BY <a href="https://au.linkedin.com/in/damanvir2singh">DAMANVIR SINGH</a></h4>
+					<h4><a href="https://au.linkedin.com/in/damanvir2singh">iWouldRatherWalk</a> @ GovHack 2017</h4>
 				</div>
 			</div>
 	</div>
@@ -384,7 +384,7 @@
 		    data: {
 		        labels: ["Bus", "Light Rail", "New Infrastructure"],
 		        datasets: [{
-		            data: [30, 50, 127.3],
+		            data: [160, 67, 127.3],
 		            backgroundColor: [
 		            'rgba(244,67,54, 0.8)',
 		            'rgba(33,150,243,0.8)',
@@ -397,7 +397,7 @@
 		    options: {
 			    pieceLabel: {
 				    mode: 'value',
-				    fontSize: 18,
+				    fontSize: 72,
 				    format: function (value) {
 				      return '$' + value;
 			        }
@@ -411,7 +411,7 @@
 		    data: {
 		        labels: ["Bus Price", "Depot", "Maintenance", "Drivers"],
 		        datasets: [{
-		            data: [500, 200, 150, 100],
+		            data: [0.5, 0.25, 0.1, 0.1],
 		            backgroundColor: [
 		            'rgba(244,67,54, 1)',
 		            'rgba(244,67,54, 0.8)',
@@ -425,7 +425,7 @@
 		    options: {
 			    pieceLabel: {
 				    mode: 'value',
-				    fontSize: 13,
+				    fontSize: 20,
 				    format: function (value) {
 				      return '$' + value;
 			        }
@@ -437,9 +437,9 @@
 		var myChart = new Chart(ctx, {
 		    type: 'pie',
 		    data: {
-		        labels: ["Light Rail Price", "Depot", "Maintenance", "Drivers"],
+		        labels: ["Phase 1 Light Rail"],
 		        datasets: [{
-		            data: [1000, 500, 700, 200],
+		            data: [67],
 		            backgroundColor: [
 		            'rgba(33,150,243,1)',
 		            'rgba(33,150,243,0.8)',
@@ -453,7 +453,7 @@
 		    options: {
 			    pieceLabel: {
 				    mode: 'value',
-				    fontSize: 13,
+				    fontSize: 100,
 				    format: function (value) {
 				      return '$' + value;
 			        }
@@ -465,13 +465,14 @@
 		var myChart = new Chart(ctx, {
 		    type: 'pie',
 		    data: {
-		        labels: ["Second Light Rail", "More Rapid Bus Sercice", "Improving Current Infrastructure"],
+		        labels: ["Second Light Rail", "Improving Road Infrastructure","More Rapid Bus Service", "Improving Current Infrastructure"],
 		        datasets: [{
-		            data: [53.5, 7, 4.5],
+		            data: [53.5, 54, 7, 4.5],
 		            backgroundColor: [
 		            'rgba(255,152,0,1)',
 		            'rgba(255,152,0,0.8)',
-		            'rgba(255,152,0,0.6)'
+		            'rgba(255,152,0,0.6)',
+		            'rgba(255,152,0,0.4)'
 		            ],
 		            borderWidth: 1
 		        }]
@@ -480,7 +481,7 @@
 		    options: {
 			    pieceLabel: {
 				    mode: 'value',
-				    fontSize: 13,
+				    fontSize: 20,
 				    format: function (value) {
 				      return '$' + value;
 			        }
