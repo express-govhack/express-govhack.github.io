@@ -41,7 +41,7 @@ p {
 .wrapper_main {
 	position: relative;
 	text-align: center;
-	background-image: url("../images/banner.jpg");
+	background-image: url("../images/banner.JPG");
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: white;
@@ -119,7 +119,7 @@ p {
 
 .navbar-default {
 	font-size: 13px;
-	margin-right: 15px; 
+	margin-right: 15px;
 }
 
 .navbar-default a {
@@ -139,7 +139,7 @@ p {
 }
 
 .sub_title {
-	
+
 	margin-bottom: 3%;
 	color: #009688;
 }
