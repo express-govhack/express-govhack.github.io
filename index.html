@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Eagress</title>
+	<link rel="shortcut icon" href="images/favicon.ico" />
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--adi is sweg-->
+
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
+	<script src="js/label_plugin.js"></script>
+
+</head>
+
+<body onload="fade_in();" id="body">
+	<div class="container-fluid wrapper_main" id="home">
+
+        <div class="wrap_elements">
+			<div class="row">
+				<div class="col-xs-12">
+					<img src="images/logo2.png" class="logo" alt="OS Edwin Logo">
+				</div>	
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12">
+					<h1 class="head_1">Wouldn't it be nicer if ACT Bus services were better?</h1>
+					<h2 class="head_2">Making the current Bus system better by optimising the current resources for Bus services in ACT. Welcome to Eagress.</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12 scroll_arrow">
+				<a href="javascript:void(0)" class="current_nav"><img src="images/scroll_arrow.png" alt="Scroll Arrow"></a>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<nav class="navbar navbar-fixed-top navbar-default" role="navigation">
+				      <ul class="nav navbar-nav navbar-right">
+				        <li><a href="javascript:void(0)" id="home_nav">HOME</a></li>
+				        <li><a href="javascript:void(0)" class="current_nav">CURRENT STATS</a></li>
+				        <li><a href="javascript:void(0)" id="future_nav">FUTURE STATS</a></li>
+				        <li><a href="javascript:void(0)" id="opt_nav">OPTIMISATION</a></li>
+				        <li><a href="javascript:void(0)" id="about_nav">ABOUT</a></li>
+				      </ul>	
+				</nav>
+			
+			</div>
+		</div>
+
+	</div>
+
+	<div class="container-fluid wrapper_heading" id="current">
+
+		<div class="row">
+			<div class="col-xs-12">
+				<h1>FUTURE STATS</h1>
+			</div>	
+		</div>
+
+	</div>
+
+	<div class="container-fluid wrapper">
+		<div classs="row">
+			<div class="row">
+				<div class="col-xs-12 title">
+					<h1>CURRENT INFRASTRUCTURE</h1>
+				</div>
+
+				<div class="col-xs-12 sub_title">
+					<h3>These are statistics from the current infrastructure for Bus services in ACT.</h3>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-6 text">
+					<canvas id="myChart" width="300" height="200"></canvas>
+				</div>
+
+				<div class="col-xs-6 text">
+					<h4>Money Spent</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fermentum vel risus in tempor. Vestibulum consectetur felis ligula, ac bibendum eros elementum sed. Etiam placerat diam elit, lacinia dignissim ligula vulputate et. Phasellus lobortis condimentum leo quis eleifend. Nullam urna leo, condimentum et purus sed, mollis commodo odio. Morbi interdum consequat tristique. Sed varius sem id felis elementum vestibulum. Donec tempus congue condimentum.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-6 contain_it">
+				<h5>Label</h5>
+				<canvas id="current_stats"></canvas>
+			</div>
+			<div class="col-xs-6">
+				<div class="col-xs-6 contain_it">
+					<h5>Label</h5>
+					<canvas id="bus_stats_cur"></canvas>
+				</div>
+				<div class="col-xs-6 contain_it">
+					<h5>Label</h5>
+					<canvas id="rail_stats_cur"></canvas>
+				</div>
+				<div class="col-xs-6 contain_it">
+					<h5>Label</h5>
+					<canvas id="newinfa_stats_cur"></canvas>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid wrapper_heading" id="future">
+
+		<div class="row">
+			<div class="col-xs-12">
+				<h1>CURRENT STATS</h1>
+			</div>	
+		</div>
+
+	</div>
+
+	<div class="container-fluid wrapper">
+		<div classs="row">
+			<div class="row">
+				<div class="col-xs-12 title">
+					<h1>FUTURE INFRASTRUCTURE</h1>
+				</div>
+
+				<div class="col-xs-12 sub_title">
+					<h3>These are statistics calculated from the optimised Bus service infrastructure in ACT.</h3>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-6 text">
+					<video controls autoplay loop width="400">
+					  <source src="vids/output.mp4" type="video/mp4">
+					</video>
+				</div>
+
+				<div class="col-xs-6 text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fermentum vel risus in tempor. Vestibulum consectetur felis ligula, ac bibendum eros elementum sed. Etiam placerat diam elit, lacinia dignissim ligula vulputate et. Phasellus lobortis condimentum leo quis eleifend. Nullam urna leo, condimentum et purus sed, mollis commodo odio. Morbi interdum consequat tristique. Sed varius sem id felis elementum vestibulum. Donec tempus congue condimentum.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container-fluid wrapper_footer">
+
+			<div class="row">
+				<div class="col-xs-12">
+					<h2>FOLLOW US ON</h2>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12 social_media">
+					<a href="#"><img src="images/facebook.png" class="img-responsive" alt="Facebook"></a>
+					<a href="#"><img src="images/twitter.png" class="img-responsive" alt="Twitter"></a>
+					<a href="#"><img src="images/google+.png" class="img-responsive" alt="Google Plus"></a>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12">
+
+					
+	                <input type="text" class="form-control" id="subscribe" placeholder="Enter your email to subscribe" >
+                 
+
+                    <div class="col-xs-12">
+	                    <button type="submit" class="btn btn-success">Subscribe</button>
+                    </div>
+	        
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12 copyright">
+					<h4>CREATED BY <a href="https://au.linkedin.com/in/damanvir2singh">DAMANVIR SINGH</a></h4>
+				</div>
+			</div>
+	</div>
+
+	<script>
+		var ctx = document.getElementById("myChart");
+		var myChart = new Chart(ctx, {
+		    type: 'line',
+		    data: {
+		        labels: ["5:00-6:00", "6:00-7:00", "7:00-8:00", "8:00-9:00", "9:00-10:00", "10:00-11:00", "11:00-12:00", "12:00-13:00", "13:00-14:00", "14:00-15:00", "15:00-16:00", "16:00-17:00", "17:00-18:00", "18:00-19:00", "19:00-20:00", "20:00-21:00", "21:00-22:00", "22:00-23:00", "23:00-24:00"],
+		        datasets: [{
+		            label: 'Total bus usage every hour (boarding + alighten)',
+		            data: [39, 2255, 10911, 19143, 9421, 5477, 4845, 4890, 4948, 5840, 11983, 13261, 14950, 7330, 2485, 1454, 985, 447, 93],
+		            backgroundColor: ['rgba(255, 99, 132, 0.4)'],
+		            borderColor: ['rgb(255,99,132)'],
+		            borderWidth: 1
+		        }]
+
+		    },
+		    options: {
+		    }
+		});
+
+		var ctx = document.getElementById("current_stats");
+		var myChart = new Chart(ctx, {
+		    type: 'pie',
+		    data: {
+		        labels: ["Bus", "Light Rail", "New Infrastructure"],
+		        datasets: [{
+		            data: [30, 50, 127.3],
+		            backgroundColor: [
+		            'rgba(244,67,54, 0.8)',
+		            'rgba(33,150,243,0.8)',
+		            'rgba(255,152,0,0.8)'
+		            ],
+		            borderWidth: 1
+		        }]
+
+		    },
+		    options: {
+			    pieceLabel: {
+				    mode: 'value',
+				    fontSize: 18,
+				    format: function (value) {
+				      return '$' + value;
+			        }
+                }
+		    }
+		});
+
+		var ctx = document.getElementById("bus_stats_cur");
+		var myChart = new Chart(ctx, {
+		    type: 'pie',
+		    data: {
+		        labels: ["Bus Price", "Depot", "Maintenance", "Drivers"],
+		        datasets: [{
+		            data: [500, 200, 150, 100],
+		            backgroundColor: [
+		            'rgba(244,67,54, 1)',
+		            'rgba(244,67,54, 0.8)',
+		            'rgba(244,67,54, 0.6)',
+		            'rgba(244,67,54, 0.4)'
+		            ],
+		            borderWidth: 1
+		        }]
+
+		    },
+		    options: {
+			    pieceLabel: {
+				    mode: 'value',
+				    fontSize: 13,
+				    format: function (value) {
+				      return '$' + value;
+			        }
+                }
+		    }
+		});
+
+		var ctx = document.getElementById("rail_stats_cur");
+		var myChart = new Chart(ctx, {
+		    type: 'pie',
+		    data: {
+		        labels: ["Light Rail Price", "Depot", "Maintenance", "Drivers"],
+		        datasets: [{
+		            data: [1000, 500, 700, 200],
+		            backgroundColor: [
+		            'rgba(33,150,243,1)',
+		            'rgba(33,150,243,0.8)',
+		            'rgba(33,150,243,0.6)',
+		            'rgba(33,150,243,0.4)'
+		            ],
+		            borderWidth: 1
+		        }]
+
+		    },
+		    options: {
+			    pieceLabel: {
+				    mode: 'value',
+				    fontSize: 13,
+				    format: function (value) {
+				      return '$' + value;
+			        }
+                }
+		    }
+		});
+
+		var ctx = document.getElementById("newinfa_stats_cur");
+		var myChart = new Chart(ctx, {
+		    type: 'pie',
+		    data: {
+		        labels: ["Second Light Rail", "More Rapid Bus Sercice", "Improving Current Infrastructure"],
+		        datasets: [{
+		            data: [53.5, 7, 4.5],
+		            backgroundColor: [
+		            'rgba(255,152,0,1)',
+		            'rgba(255,152,0,0.8)',
+		            'rgba(255,152,0,0.6)'
+		            ],
+		            borderWidth: 1
+		        }]
+
+		    },
+		    options: {
+			    pieceLabel: {
+				    mode: 'value',
+				    fontSize: 13,
+				    format: function (value) {
+				      return '$' + value;
+			        }
+                }
+		    }
+		});
+	</script>
+</body>
+
+</html>
+
+
