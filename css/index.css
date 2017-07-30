@@ -236,12 +236,26 @@ p {
 	margin-bottom: 5%;
 }
 
+#money_charts {
+	margin-top: 8vh;
+	margin-bottom: 8vh;
+}
 
+#peak_load {
+	margin-top: 8vh;
+}
 
+#peak_load canvas {
+	margin-top: 8vh;
+}
 
+#retard_vid {
+	width: 90%;
+}
 
-
-
+#missing {
+	width: 100%;
+}
 
 
 
