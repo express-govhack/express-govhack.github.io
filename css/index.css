@@ -30,7 +30,9 @@ p {
 	font-size: 16px;
 }
 
-
+video {
+	width: 80%;
+	height: auto;
 }
 
 .img-responsive {
@@ -124,7 +126,7 @@ p {
 
 .navbar-default a {
 	color: rgb(24, 181, 186);
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgb(255, 255, 255);
 	font-weight: bold;
 	transition: background 0.3s linear 0s;
 }
@@ -265,5 +267,12 @@ p {
 	margin-top: 250px;
 }
 
+.contain_it p{
+	margin-top: 5vh;
+}
+
+.social_btn {
+	height: 200px;
+}
 
 
