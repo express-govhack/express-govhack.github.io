@@ -109,10 +109,10 @@
 					the future of public transport
 					in the capital. With
 					infrastructure spending in the
-					millions, Express aims to
+					millions, <b>Express aims to
 					produce an optimal schedule to
 					improve reliability, reduce
-					delays, and minimise load.
+					delays, and minimise load.</b>
 					</p>
 					<p style="font-size:24px;">
 					Think of this as a way to get
@@ -122,26 +122,34 @@
 					free. Express can even
 					simulate, test, and optimise
 					your network before it is
-					built.
+					built and make suggestions to
+					improve it.
 					</p>
-					<p style="font-size:64px;"><i class="fa fa-bus" aria-hidden="true"></i> <i class="fa fa-train" aria-hidden="true"></i> <i class="fa fa-rocket" aria-hidden="true"></i>
+					<p style="font-size:24px;">
+					For each new bus we can save
+					from purchasing by properly
+					utilising the others yields a
+					saving of $500,000 AUD +
+					maintenance costs.
+					</p>
+					<p style="font-size:64px;"><i class="fa fa-bus" aria-hidden="true"></i> <i class="fa fa-train" aria-hidden="true"></i> <i class="fa fa-dollar" aria-hidden="true"></i>
 </p>
 				</div>
 				<div class="col-xs-4 contain_it">
-					<h3>ACT Public Insrastructure Spending (In Millions)</h3>
+					<h3>ACT Public Infrastructure Spending (in millions)</h3>
 					<canvas id="current_stats"></canvas>
 				</div>
 				<div class="col-xs-4">
 					<div class="col-xs-6 contain_it">
-						<h3>Single Bus (In Millions)</h3>
+						<h3>Single Bus (in thousands)</h3>
 						<canvas id="bus_stats_cur"></canvas>
 					</div>
 					<div class="col-xs-6 contain_it">
-						<h3>Phase 1 Light Rail (In Millions)</h3>
+						<h3>Phase 1 Light Rail (in millions)</h3>
 						<canvas id="rail_stats_cur"></canvas>
 					</div>
 					<div class="col-xs-6 contain_it">
-						<h3>New ACT Public Infrastructure (In Millions)</h3>
+						<h3>New ACT Public Infrastructure (in millions)</h3>
 						<canvas id="newinfa_stats_cur"></canvas>
 					</div>
 				</div>
@@ -385,7 +393,7 @@
 					</p>
 
 					<p>
-					Air Quality Monitoring -- Seeing if there was any correlation between bus and polution
+					Air Quality Monitoring -- Seeing if there was any correlation between bus and pollution
 					<a href="https://2017.hackerspace.govhack.org/dataset/air-quality-monitoring-data">
 					https://2017.hackerspace.govhack.org/dataset/air-quality-monitoring-data</a>
 					</p>
@@ -459,7 +467,7 @@
 		    data: {
 		        labels: ["5:00-6:00", "6:00-7:00", "7:00-8:00", "8:00-9:00", "9:00-10:00", "10:00-11:00", "11:00-12:00", "12:00-13:00", "13:00-14:00", "14:00-15:00", "15:00-16:00", "16:00-17:00", "17:00-18:00", "18:00-19:00", "19:00-20:00", "20:00-21:00", "21:00-22:00", "22:00-23:00", "23:00-24:00"],
 		        datasets: [{
-		            label: 'Total bus usage every hour (boarding + alighten)',
+		            label: 'Total bus usage every hour (boarding + alighting)',
 		            data: [39, 2255, 10911, 19143, 9421, 5477, 4845, 4890, 4948, 5840, 11983, 13261, 14950, 7330, 2485, 1454, 985, 447, 93],
 		            backgroundColor: ['rgba(255, 99, 132, 0.4)'],
 		            borderColor: ['rgb(255,99,132)'],
@@ -492,7 +500,7 @@
 				    mode: 'value',
 				    fontSize: 72,
 				    format: function (value) {
-				      return '$' + value;
+				      return '$' + value + 'M';
 			        }
                 }
 		    }
@@ -504,7 +512,7 @@
 		    data: {
 		        labels: ["Bus Price", "Depot", "Maintenance", "Drivers"],
 		        datasets: [{
-		            data: [0.5, 0.25, 0.1, 0.1],
+		            data: [500, 250, 100, 100],
 		            backgroundColor: [
 		            'rgba(244,67,54, 1)',
 		            'rgba(244,67,54, 0.8)',
@@ -518,9 +526,9 @@
 		    options: {
 			    pieceLabel: {
 				    mode: 'value',
-				    fontSize: 20,
+				    fontSize: 18,
 				    format: function (value) {
-				      return '$' + value;
+				      return '$' + value + 'k';
 			        }
                 }
 		    }
@@ -546,9 +554,9 @@
 		    options: {
 			    pieceLabel: {
 				    mode: 'value',
-				    fontSize: 100,
+				    fontSize: 70,
 				    format: function (value) {
-				      return '$' + value;
+				      return '$' + value + 'M';
 			        }
                 }
 		    }
@@ -576,7 +584,7 @@
 				    mode: 'value',
 				    fontSize: 20,
 				    format: function (value) {
-				      return '$' + value;
+				      return '$' + value + 'M';
 			        }
                 }
 		    }
