@@ -181,7 +181,7 @@
 			</div>
 
 			<div class="row">
-				<p style="font-size:24px;">We can simulate the dynamics of a network using only the timetable in GTFS (General Transport Feed Specification). We reproduce the topology of the network and run dynamical agent-based models of the public transport system. Using simple statistical models of average delays, we are able to reproduce the observed 'bunching' of buses in key problem areas.</p>
+				<p style="font-size:24px;">We can simulate the dynamics of a network using only the timetable in GTFS (General Transport Feed Specification). We reproduce the topology of the network and run dynamical agent-based models of the public transport system. At this point, application of any statistical model may be applied. Using a simple statistical model of average delays, we are able to reproduce the observed 'bunching' of buses in key problem areas.</p>
 			</div>
 
 			<div class="row" id="peak_load">
@@ -282,7 +282,7 @@
 				</div> --->
 				<div class="col-xs-12">
 
-					<p style="font-size:24px;">The framework is extensible, limited only by the granularity of available data and sufficient information about traffic density and bulk movement of commuters. Using our already-built ABM, we are now in a position to pursue optimisation of bus timetables. <b>Given the introduction of the Gungahlin-Civic light rail line, an review of the bus transport system is needed to ensure efficient utilisation of the Canberra public transport system.</b> Our GTFS derived graph model includes time-varying edge lengths, allowing us to apply constrained integer programming models to find, test, and validate alternative bus schedules.</p>
+					<p style="font-size:24px;">The framework is extensible, limited only by the granularity of available data, sufficient information on traffic density, and bulk movement of commuters. Using our already-built ABM, we are now in a position to pursue optimisation of bus timetables. <b>Given the introduction of the Gungahlin-Civic light rail line, an review of the bus transport system is needed to ensure efficient utilisation of the Canberra public transport system.</b> Our GTFS derived graph model includes time-varying edge lengths, allowing us to apply constrained integer programming models to find, test, and validate alternative bus schedules.</p>
 				</div>
 			</div>
 
@@ -346,22 +346,7 @@
     <div class="container-fluid wrapper">
 		<div classs="row">
 			<div class="row">
-				<div class="col-xs-12 title">
-					<h1>MISSING PASSENGERS</h1>
-				</div>
-
-				<div class="col-xs-12 sub_title">
-					<h3>Curiosities in the data</h3>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-xs-6 text">
-					<img src="images/missingPassengers.png" id="missing">
-				</div>
-				<div class="col-xs-6 text">
-					<p> The graph on the left shows the number of commuters who have tapped on minus the number of passengers who have tapped off. While it plausible that this number might be positive at the end of a day (if, say, some number of people do not tap off), there's no good explanation of why more people tap off than there are people currently tapped on.
-					</p>
+<hr/>
 					<p>ACT ACTION/MyWay Alighting -- for volume of people to make statistical model more realistic and show movement of humans
 					<a href="https://2017.hackerspace.govhack.org/dataset/mywayaction-buses-alightings-stop-hour">https://2017.hackerspace.govhack.org/dataset/mywayaction-buses-alightings-stop-hour</a></p>
 
@@ -406,8 +391,40 @@
 					<p>
 					Vehicle Registration -- Was going to see higher registration in zones less service and with air pollution data.
 					<a href="https://2017.hackerspace.govhack.org/dataset/act-registered-vehicles">
-					https://2017.hackerspace.govhack.org/dataset/act-registered-vehicles</a></p>
+					  https://2017.hackerspace.govhack.org/dataset/act-registered-vehicles</a></p>
+
+					<hr/>
+				<div class="col-xs-12 title">
+					<h1>MISSING PASSENGERS</h1>
 				</div>
+
+				<div class="col-xs-12 sub_title">
+					<h3>Curiosities in the data</h3>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-6 text">
+					<img src="images/missingPassengers.png" id="missing">
+				</div>
+				<div class="col-xs-5 text">
+				  <p style="font-size:56px;"><i class="fa fa-question-circle-o" aria-hidden="true"></i></p>
+					<p style="font-size:18px;">The graph on the left
+					shows the number of commuters
+					who have tapped on minus the
+					number of passengers who have
+					tapped off. While it plausible
+					that this number might be
+					positive at the end of a day
+					(if, say, some number of
+					people do not tap off),
+					there's no good explanation of
+					why more people tap off than
+					there are people currently
+					tapped on.
+					</p>
+
+			</div>
 			</div>
 		</div>
 	</div>
@@ -550,7 +567,7 @@
 		    options: {
 			    pieceLabel: {
 				    mode: 'value',
-				    fontSize: 60,
+				    fontSize: 36,
 				    format: function (value) {
 				      return '$' + value + 'M';
 			        }
@@ -578,7 +595,7 @@
 		    options: {
 			    pieceLabel: {
 				    mode: 'value',
-				    fontSize: 50,
+				    fontSize: 36,
 				    format: function (value) {
 				      return '$' + value + 'M';
 			        }
