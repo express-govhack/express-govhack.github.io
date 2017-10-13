@@ -32,15 +32,15 @@
 
         <div class="wrap_elements">
 			<div class="row">
-				<div class="col-xs-12">
-					<img src="images/logo2.png" class="logo" alt="OS Edwin Logo">
+			  <div class="col-xs-12">
+			    <img src="images/logo2.png" class="logo" alt="Express">
 				</div>	
 			</div>
 
 			<div class="row">
 				<div class="col-xs-12">
 					<h1 class="head_1">Wouldn't it be nicer if ACT Bus services were better?</h1>
-					<h2 class="head_2">Making your commute better by optimising the resources for Bus services in ACT. Welcome to Express.</h2>
+					<h2 class="head_2">Making your commute better by optimising the resources for Bus services in ACT. <b>Welcome to Express.</b></h2>
 				</div>
 			</div>
 		</div>
@@ -93,17 +93,13 @@
 				</div>
 			</div>
 
-			<!--<div class="row">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fermentum vel risus in tempor. Vestibulum consectetur felis ligula, ac bibendum eros elementum sed. Etiam placerat diam elit, lacinia dignissim ligula vulputate et. Phasellus lobortis condimentum leo quis eleifend. Nullam urna leo, condimentum et purus sed, mollis commodo odio. Morbi interdum consequat tristique. Sed varius sem id felis elementum vestibulum. Donec tempus congue condimentum.</p>
-			</div>-->
-
 			<div class="row" id="money_charts">
 				<div class="col-xs-4 contain_it">
-					<h2>A network for our future</h2>
+					<h2>Towards a network for our future</h2>
 					<p style="font-size:24px;">The
 					efficacy of a transport
 					network relies strongly on
-					infrastructure, and
+					infrastructure and
 					scheduling. The ACT 2016-17
 					budget lays a bold plan for
 					the future of public transport
@@ -121,35 +117,35 @@
 					making your network better for
 					free. Express can even
 					simulate, test, and optimise
-					your network before it is
-					built and make suggestions to
-					improve it.
+					your network (including rail)
+					before it is built and make
+					suggestions to improve it.
 					</p>
 					<p style="font-size:24px;">
 					For each new bus we can save
 					from purchasing by properly
 					utilising the others yields a
 					saving of $500,000 AUD +
-					maintenance costs.
+					maintenance costs. 
 					</p>
-					<p style="font-size:64px;"><i class="fa fa-bus" aria-hidden="true"></i> <i class="fa fa-train" aria-hidden="true"></i> <i class="fa fa-dollar" aria-hidden="true"></i>
+					<p style="font-size:64px;"><i class="fa fa-bus" aria-hidden="true"></i> <i class="fa fa-train" aria-hidden="true"></i> <i class="fa fa-rocket" aria-hidden="true"></i> <i class="fa fa-dollar" aria-hidden="true"></i>
 </p>
 				</div>
 				<div class="col-xs-4 contain_it">
-					<h3>ACT Public Infrastructure Spending (in millions)</h3>
+				  <h2>ACT Public Infrastructure Spending</h2>
 					<canvas id="current_stats"></canvas>
 				</div>
 				<div class="col-xs-4">
-					<div class="col-xs-6 contain_it">
-						<h3>Single Bus (in thousands)</h3>
+					<div class="col-xs-7 contain_it">
+						<h2>Each bus costs</h2>
 						<canvas id="bus_stats_cur"></canvas>
 					</div>
-					<div class="col-xs-6 contain_it">
-						<h3>Phase 1 Light Rail (in millions)</h3>
+					<div class="col-xs-5 contain_it">
+						<h2>Phase 1 Light Rail</h2>
 						<canvas id="rail_stats_cur"></canvas>
 					</div>
 					<div class="col-xs-6 contain_it">
-						<h3>New ACT Public Infrastructure (in millions)</h3>
+						<h2>New ACT Public Infrastructure</h2>
 						<canvas id="newinfa_stats_cur"></canvas>
 					</div>
 				</div>
@@ -236,7 +232,7 @@
 				</div>
 
 				<div class="col-xs-12 sub_title">
-				  <h3>Using tap-on/tap-off data to model commuter utilisation of the PT network</h3>
+				  <h3>Using tap-on/tap-off data to model commuter utilisation of the public transport network</h3>
 				  <p style="font-size:96px;"><i class="fa fa-users" aria-hidden="true"></i></p>
 				</div>
 			</div>
@@ -526,7 +522,7 @@
 		    options: {
 			    pieceLabel: {
 				    mode: 'value',
-				    fontSize: 18,
+				    fontSize: 24,
 				    format: function (value) {
 				      return '$' + value + 'k';
 			        }
@@ -554,7 +550,7 @@
 		    options: {
 			    pieceLabel: {
 				    mode: 'value',
-				    fontSize: 70,
+				    fontSize: 60,
 				    format: function (value) {
 				      return '$' + value + 'M';
 			        }
@@ -582,7 +578,7 @@
 		    options: {
 			    pieceLabel: {
 				    mode: 'value',
-				    fontSize: 20,
+				    fontSize: 50,
 				    format: function (value) {
 				      return '$' + value + 'M';
 			        }
